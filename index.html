@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Dice</title>
+    <!-- Font Awesome 5 | visit: https://fontawesome.com/v5.15/icons?d=gallery&p=2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <section class="container">
+
+        <!-------- register player -------->
+
+        <div class="register">
+            <form>
+                <div class="input-holder">
+                    <input type="text" name="playerOne" placeholder="Input name of first player">
+                    <input type="text" name="playerTwo" placeholder="Input name of second player">
+                    <div>
+                        <input id="adult" name="adult" type="checkbox">
+                        <label for="adult">We are older then 18 year.</label>
+                    </div>
+
+                    <button>Start Game</button>
+                </div>
+                <div class="image-holder">
+                    <img src="https://cdn.pixabay.com/photo/2020/05/24/14/25/cube-5214498_960_720.jpg" alt="">
+                </div>
+            </form>
+        </div>
+
+        <!-- game -->
+
+        <div class="game">
+            <!-- left part for display player one -->
+            <article id="player-one" class="player active">
+                <h2>Player One</h2>
+                <div class="total-score">
+                    <p>Total score</p>
+                    <h3>0</h3>
+                </div>
+                <div class="current-score">
+                    <p>Current score</p>
+                    <h4>0</h4>
+                </div>
+            </article>
+
+            <!-- middle part for command and rolled dice -->
+
+            <article class="middle">
+                <button id="new-game"><i class="fas fa-sync"></i> new game</button>
+                <div class="rolled-dice">
+                    <div class="diceCube">
+                        <div id="rolled-dice" class="dice">
+                            <div class="side side-1"><img src="img/dice-1.png" alt=""></div>
+                            <div class="side side-2"><img src="img/dice-2.png" alt=""></div>
+                            <div class="side side-3"><img src="img/dice-3.png" alt=""></div>
+                            <div class="side side-4"><img src="img/dice-4.png" alt=""></div>
+                            <div class="side side-5"><img src="img/dice-5.png" alt=""></div>
+                            <div class="side side-6"><img src="img/dice-6.png" alt=""></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button id="roll-dice"><i class="fas fa-dice"></i> roll dice</button><br>
+                    <button id="hold-dice"><i class="fas fa-hand-holding"></i> hold</button>
+                </div>
+            </article>
+
+            <!-- left part for display player two -->
+
+            <article id="player-two" class="player">
+                <h2>Player Two</h2>
+                <div class="total-score">
+                    <p>Total score</p>
+                    <h3>0</h3>
+                </div>
+                <div class="current-score">
+                    <p>Current score</p>
+                    <h4>0</h4>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
