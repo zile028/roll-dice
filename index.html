@@ -15,6 +15,23 @@
 <body>
     <section class="container">
 
+
+        <!-------- game rulles -------->
+        <div class="game-rulles">
+            <h2>GAME RULES:</h2>
+            <ol>
+                <li>The game has 2 players, playing in rounds</li>
+                <li>In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND
+                    score</li>
+                <li>BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's
+                    turn</li>
+                <li>The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score.
+                    After that, it's the next player's turn</li>
+                <li>The first player to reach 100 points on GLOBAL score wins the game</li>
+            </ol>
+            <button id="close-rulle">Close</button>
+        </div>
+
         <!-------- register player -------->
 
         <div class="register">
@@ -54,7 +71,10 @@
             <!-- middle part for command and rolled dice -->
 
             <article class="middle">
-                <button id="new-game"><i class="fas fa-sync"></i> new game</button>
+                <div>
+                    <button id="new-game"><i class="fas fa-sync"></i> new game</button><br>
+                    <button id="rulle-game"><i class="fas fa-dice-d6"></i> rulles</button>
+                </div>
                 <div class="rolled-dice">
                     <div class="diceCube">
                         <div id="rolled-dice" class="dice">
@@ -68,7 +88,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="played-btn">
                     <button id="roll-dice"><i class="fas fa-dice"></i> roll dice</button><br>
                     <button id="hold-dice"><i class="fas fa-hand-holding"></i> hold</button>
                 </div>

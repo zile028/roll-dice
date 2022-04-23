@@ -158,7 +158,7 @@ button {
   color: #fff;
 }
 
-.middle div button {
+.middle .played-btn button {
   display: none;
 }
 
@@ -182,7 +182,6 @@ button:hover {
 }
 
 .rolled-dice div {
-  /* box-shadow: var(--shadow); */
   width: var(--diceSize);
   height: var(--diceSize);
 }
@@ -302,18 +301,11 @@ button:hover {
   font-size: 16px;
   display: flex;
   flex-direction: column;
-  animation: showWinner 3s ease;
+  animation: show 3s ease;
   animation-fill-mode: forwards;
   transform: scale(0);
 }
-@keyframes showWinner {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
+
 .winner-box h2 {
   text-align: center;
   font-size: 40px;
@@ -347,4 +339,59 @@ button:hover {
 .winner-box h3 span {
   font-size: 50px;
   color: tomato;
+}
+
+.game-rulles {
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-size: 2.5rem;
+  line-height: 1.7;
+  padding: 20px;
+  border-radius: 10px;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  transform: scale(0);
+}
+
+.game-rulles.hide {
+  animation-name: hide;
+}
+.game-rulles.show {
+  animation-name: show;
+}
+
+.game-rulles ol {
+  list-style-position: inside;
+}
+
+.game-rulles h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.game-rulles button {
+  display: block;
+  margin: 20px auto;
+}
+
+@keyframes show {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes hide {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
 }

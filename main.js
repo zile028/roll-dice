@@ -3,6 +3,9 @@ let controls = document.querySelector(".middle");
 let rollDiceBtn = controls.querySelector("#roll-dice");
 let holdBtn = controls.querySelector("#hold-dice");
 let newGameBtn = controls.querySelector("#new-game");
+let rullesBtn = controls.querySelector("#rulle-game");
+let closeRullesBtn = document.querySelector("#close-rulle");
+let rullesBox = document.querySelector(".game-rulles");
 let diceBox = controls.querySelector("#rolled-dice");
 let registerBox = document.querySelector(".register");
 let formBox = registerBox.querySelector("form");
@@ -11,6 +14,8 @@ let diceNumber = null;
 let winnerBox = null;
 
 newGameBtn.addEventListener("click", newGame);
+rullesBtn.addEventListener("click", showRulles);
+closeRullesBtn.addEventListener("click", showRulles);
 formBtn.addEventListener("click", validate);
 
 let players = [
@@ -41,12 +46,22 @@ let config = {
     "dice-5.png",
     "dice-6.png",
   ],
-  winnLimit: 20,
+  winnLimit: 100,
 };
 
 function newGame() {
   registerBox.style.display = "flex";
   winnerBox.remove();
+}
+
+function showRulles() {
+  if (rullesBox.classList.contains("show")) {
+    rullesBox.classList.remove("show");
+    rullesBox.classList.add("hide");
+  } else {
+    rullesBox.classList.remove("hide");
+    rullesBox.classList.add("show");
+  }
 }
 
 function init() {
